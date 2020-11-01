@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class CameraFollowController : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class CameraFollowController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // if (!isLocalPlayer)
+        // {
+        //     return;
+        // }
+        
         LookAtTarget();
         MoveToTarger();
     }
